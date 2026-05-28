@@ -15,5 +15,6 @@ spec:
       containers:
       - name: springuma
         image: laiadiaz/springuma:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
