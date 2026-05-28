@@ -123,32 +123,32 @@ The workflow in `.github/workflows/ci.yml` triggers on every **push** and **pull
 - Maven · GitHub Actions
 
 ## Pasos
-`Dockerfile`
+`Dockerfile`  
 ./mvnw clean package
 
-DOCKER LOCAL
-docker build -t springuma .
-docker images -> springuma
-docker run -p 8080:8080 springuma
+DOCKER LOCAL  
+docker build -t springuma .  
+docker images -> springuma  
+docker run -p 8080:8080 springuma  
 
-DOCKER HUB
-docker login -u laiadiaz : LaiaJing10
-docker tag springuma laiadiaz/springuma:latest
-docker push laiadiaz/springuma:latest
+DOCKER HUB  
+docker login -u laiadiaz : LaiaJing10  
+docker tag springuma laiadiaz/springuma:latest  
+docker push laiadiaz/springuma:latest  
 
-KUBERNETES LOCAL
-`k8s -> deployment.yaml service.yaml`
-kubectl apply -f k8s/deployment.yaml
-kubectl apply -f k8s/service.yaml
+KUBERNETES LOCAL  
+`k8s -> deployment.yaml service.yaml`  
+kubectl apply -f k8s/deployment.yaml  
+kubectl apply -f k8s/service.yaml  
 
-Verificaciones
-kubectl get pods
-kubectl get services
+Verificaciones  
+kubectl get pods  
+kubectl get services  
 
 Secrets and variables 
 
-Workflow GitHub Actions
-`.github/workflows/ci.yml`
+Workflow GitHub Actions  
+`.github/workflows/ci.yml`  
 
-Actions -> Runners
+Actions -> Runners  
 
