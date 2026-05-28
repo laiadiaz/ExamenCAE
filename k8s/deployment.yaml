@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springuma-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springuma
+  template:
+    metadata:
+      labels:
+        app: springuma
+    spec:
+      containers:
+      - name: springuma
+        image: laiadiaz/springuma:latest
+        ports:
+        - containerPort: 8080
